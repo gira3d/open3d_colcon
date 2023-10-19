@@ -26,8 +26,11 @@ option(BUILD_CUDA_MODULE          "Build the CUDA module"                    OFF
 set(BUILD_CUDA_MODULE OFF)
 endif()
 
-option(ENABLE_CACHED_CUDA_MANAGER "Enable cached CUDA memory manager"        ON)
-set(ENABLE_CACHED_CUDA_MANAGER ON)
+option(BUILD_LIBREALSENSE         "Build support for Intel RealSense camera" OFF)
+set(BUILD_LIBREALSENSE OFF)
+
+option(ENABLE_CACHED_CUDA_MANAGER "Enable cached CUDA memory manager"        OFF)
+set(ENABLE_CACHED_CUDA_MANAGER OFF)
 
 if (NOT DEFINED OPEN3D_PARFOR_BLOCK)
    set(OPEN3D_PARFOR_BLOCK 128)
